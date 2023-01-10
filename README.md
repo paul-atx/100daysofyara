@@ -6,5 +6,5 @@ Welcome to my 100 Days of Yara.
 
 #Day 10 - IcedID
 
-IcedID is a dangerous form of malware used by cybercriminals to steal sensitive information. It is distributed via malicious emails, websites, and downloads. It can steal credentials, banking info, and more, and can download additional malicious payloads.
+IcedID is used by cybercriminals to steal sensitive information. It is a multi-stage, modular, and polymorphic malware that is often used in targeted attacks. It is distributed through malicious emails, compromised websites, and malicious software downloads. Once installed, the malware uses a variety of techniques to steal credentials, banking information, and other sensitive data. It also has the ability to download additional malicious payloads and execute commands on the infected system. This makes it a particularly dangerous threat to businesses as it can spread quickly and steal valuable data.
 
