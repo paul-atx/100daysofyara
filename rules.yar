@@ -18,3 +18,25 @@ rule Malware_IcedID
     condition:
         pe.is_pe and (filesize > 50KB and filesize < 2MB) and 2 of them
 }
+
+rule Malware_Remcos
+{
+    meta:
+        description = “Detects strings in Remcos RAT samples”
+        hash = “698fe29ab7c4fb91466faee9d241f2d058eb19a97bf5df5c07daef68dc344bae”
+    strings:
+        $ = “[Cleared browsers logins and cookies.]”
+        $ = “[Chrome StoredLogins found, cleared!]”
+        $ = “[Firefox cookies found, cleared!]”
+        $ = “[Firefox StoredLogins Cleared!]”
+        $ = “[Chrome Cookies found, cleared!]”
+        $ = “[Firefox StoredLogins not found]”
+        $ = “[Chrome StoredLogins not found]”
+        $ = “[Text pasted from clipboard]”
+        $ = “[Firefox Cookies not found]”
+        $ = “[Text copied to clipboard]”
+        $ = “[Chrome Cookies not found]”
+    condition:
+        pe.is_pe and 7 of them
+}
+
