@@ -39,3 +39,4 @@ rule Malware_Remcos
     condition:
         pe.is_pe and 7 of them
 }
+
