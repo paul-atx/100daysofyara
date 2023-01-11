@@ -3,9 +3,10 @@ import "pe"
 rule Malware_IcedID
 {
     meta:
-        author = "paul-atx"
+        author = "paul"
         description = "Detects packed IcedId samples based on patterns in encrypted strings. Low false positives."
-        days_of_yara = 10/100
+        days_of_yara = "10/100"
+        hash = "8c25b5aac85cb8b66c2c30fc5ee465c1be8c81109d9fd1a72085470d1378a2d4"
     strings:
         $h2 = { 48 63 44 24 ?0 48 63 4c 24 ?4 66 3b }
         $h4 = { 48 63 44 24 ?? 48 63 4c 24 24 3a }
