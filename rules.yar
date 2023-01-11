@@ -22,7 +22,7 @@ rule Malware_IcedID
 rule Malware_Remcos
 {
     meta:
-        description = “698fe29ab7c4fb91466faee9d241f2d058eb19a97bf5df5c07daef68dc344bae”
+        description = “Detects strings in Remcos RAT samples”
         hash = “698fe29ab7c4fb91466faee9d241f2d058eb19a97bf5df5c07daef68dc344bae”
     strings:
         $ = “[Cleared browsers logins and cookies.]”
