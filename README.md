@@ -11,5 +11,8 @@ I wrote and tested a few rules throughout the day and merged them together into 
 
 Although rules written this way can't be expected to have a long shelf life, the rule was detecting on IcedId samples collected throughout 2022 and even some this year. It's not perfect but its finding evil.
 
+## Day 11 - Remcos RAT
 
+Remcos RAT is a powerful Remote Administration Tool (RAT) used by malicious actors to gain access to remote systems. It is cross-platform, allowing attackers to gain access to Windows, macOS, and Linux systems. It has many features, including keylogging, remote command execution, file manipulation, and the ability to take screenshots. Remcos is a commercially available tool, but it is often used by malicious actors in targeted attacks. 
 
+There are a few good rules out there working well for Remcos RAT, but some of them are a bit too specific to match on some Remcos samples, by generalizing these rules a bit you can get something that is more effective at detecting Remcos samples. This rule had over 8k hits, while other rules I evaluated only had 5k hits.
