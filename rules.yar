@@ -24,6 +24,7 @@ rule Malware_Remcos_RAT
     meta:
         author = "paul"
         description = “Detects strings in Remcos RAT samples”
+        days_of_yara = "11/100"
         hash = “698fe29ab7c4fb91466faee9d241f2d058eb19a97bf5df5c07daef68dc344bae”
     strings:
         $ = “[Cleared browsers logins and cookies.]”
@@ -45,7 +46,6 @@ rule C2_Havoc_Client {
     meta:
         author = “paul”
         description = “Code-based YARA rule composed from potentially unique basic blocks for the selected set of samples/family.”
-        date = “01-12-23”
         days_of_yara = "12/100"
     strings:
         $blockhash_0x104db5f95e06aed9 = { 4883ec28 4989c9 e8???????? 488d0c01 e8???????? 4c89c8 4883c428 c3 }
