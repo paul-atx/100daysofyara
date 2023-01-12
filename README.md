@@ -1,4 +1,4 @@
-# 100daysofyara
+# 100 Days of YARA
 
 I've decided to play along but I don't have a twitter account. Github seems like a great place for a ruleset and a bit of a journal. Welcome to my 100 Days of YARA.
 
@@ -25,4 +25,4 @@ There are a variety of methods for generating rules that i've experimented with.
 
 MCRIT is a framework created to simplify the application of the MinHash algorithm in the context of code similarity. It can be used to rapidly implement "shinglers", i.e. methods which encode properties of disassembled functions, to then be used for similarity estimation via the MinHash algorithm. It can also suggest YARA rules based on the unique functions in the samples.
 
-For day twelve I'm sharing a YARA rule I created using MCRIT based on those Havoc client samples.
+For day twelve, I'm sharing a YARA rule I created using MCRIT based on those Havoc client samples.
