@@ -19,6 +19,10 @@ There are a few good rules out there working well for Remcos RAT, but some of th
 
 ## Day 12 - Havoc C2
 
-Havoc is a modern and malleable post-exploitation command and control framework. It's relatively new development and I haven't seen a lot of usage but its very capable. This will likely be used and tested by red teams. So lets make sure we have some detections for it. I compiled a few clients and made sure everything was working, then used the clients as a basis for rules.
+Havoc is a modern and malleable post-exploitation command and control framework. It's relatively new development and I haven't seen a lot of usage but its very capable. This will likely be used and tested by red teams. We don't have to wait to be impacted, lets make detections for it proactively. I compiled a variety of clients using all build options and made sure everything was working, then used the proven clients as a basis for YARA rules.
 
-There are a variety of methods for generating rules that i've experimented with. It's good to find a balance between spending a lot of time to make a high fidelity rule versus knocking something out quick and moving on to cover another threat. One tool that has helped me quickly create YARA rules 
+There are a variety of methods for generating rules that i've experimented with. It's good to find a balance between spending a lot of time to make a high fidelity rule versus knocking something out quick and moving on to cover another threat. One tool that has helped me quickly create YARA rules is MCRIT by Daniel Plohman https://github.com/danielplohmann/mcrit
+
+MCRIT is a framework created to simplify the application of the MinHash algorithm in the context of code similarity. It can be used to rapidly implement "shinglers", i.e. methods which encode properties of disassembled functions, to then be used for similarity estimation via the MinHash algorithm. It can also suggest YARA rules based on the unique functions in the samples.
+
+For day twelve I'm sharing a YARA rule I created using MCRIT based on those Havoc client samples.
